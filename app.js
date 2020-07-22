@@ -1,3 +1,5 @@
+
+
 new Vue({
     el: '#editor',
     data() {
@@ -14,11 +16,26 @@ new Vue({
                 var successful = document.execCommand('copy');
                 var msg = successful ? 'successful' : 'unsuccessful';
                 console.info('Markdown code was copied ' + msg);
-                alert('Markdown code was copied ' + msg);
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: `Markdown code was copied ${msg}.`,
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                
+
                 
             } catch (err) {
                 console.error('Oops, unable to copy: ', err );
-                alert('Oops, unable to copy');
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'error',
+                    title: 'Oops, unable to copy: '+err,
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+               
             }
 
             /* unselect the range */

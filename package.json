@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/gkalmoukis/vuejs-markdown-editor/issues"
   },
-  "homepage": "https://github.com/gkalmoukis/vuejs-markdown-editor#readme"
+  "homepage": "https://github.com/gkalmoukis/vuejs-markdown-editor#readme",
+  "dependencies": {
+    "vue-simple-alert": "^1.1.1"
+  }
 }
