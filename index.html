@@ -16,23 +16,6 @@
         <div id="preview" v-html="input | marked"></div>
         <button @click="save">Log</button>
     </div>
-    <script>  
-        new Vue({
-            el: '#editor',
-            data() {
-                return {  
-                    input: '# Hello' ,
-                }
-            },
-            methods:{
-                save(){
-                    console.log(document.getElementById("markdown-content").value)
-                }
-            },
-            filters: {
-                marked: marked
-            }
-        })
-    </script>
+    <script src="./app.js"></script>
 </body>
 </html>
