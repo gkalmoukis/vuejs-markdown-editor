@@ -13,7 +13,7 @@
     <div id="editor">
         <textarea v-model="input" id="markdown-content"  debounce="300"></textarea>
         <div id="preview" v-html="input | marked"></div>
-        <button @click="save">Log</button>
+        <button @click="copy">Copy markdown to cliapbord</button>
     </div>
     <script src="./app.js"></script>
 </body>
