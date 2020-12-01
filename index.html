@@ -6,13 +6,17 @@
     <link rel="stylesheet" href="./styles.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/vue/1.0.24/vue.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <title>Markdown editor | Giorgos Kalmoukis</title>
 </head>
 <body>
     <div id="editor">
         <textarea v-model="input" id="markdown-content"  debounce="300"></textarea>
         <div id="preview" v-html="input | marked"></div>
-        <button @click="copy">Copy markdown to cliapbord</button>
+        <a @click="copy" class="float">
+            <i class="fa fa-clipboard my-float"></i>
+        </a>
+        <!-- <button @click="copy">Copy markdown to cliapbord</button> -->
     </div>
     <script src="./app.js"></script>
 </body>
