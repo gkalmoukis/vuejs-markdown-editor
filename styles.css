@@ -3,9 +3,9 @@ html, body, #editor {
     height: 100%;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     color: #333;
-    }
+}
 
-    textarea, #editor div {
+textarea, #editor div {
     display: inline-block;
     width: 49%;
     height: 100%;
@@ -14,9 +14,9 @@ html, body, #editor {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 20px;
-    }
+}
 
-    textarea {
+textarea {
     border: none;
     border-right: 1px solid #ccc;
     resize: none;
@@ -25,30 +25,40 @@ html, body, #editor {
     font-size: 14px;
     font-family: 'Monaco', courier, monospace;
     padding: 20px;
-    }
+}
 
-    code {
+code {
     color: #f66;
-    }
+}
 
-    #preview {
-        overflow: scroll;
-    }
+#preview {
+    overflow: scroll;
+}
 
 
-    .float{
-        position:fixed;
-        width:60px;
-        height:60px;
-        bottom:20px;
-        right:20px;
-        background-color:#0C9;
-        color:#FFF;
-        border-radius:50px;
-        text-align:center;
-        box-shadow: 2px 2px 3px #999;
-    }
-    
-    .my-float{
-        margin-top:22px;
-    }
+.float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:20px;
+    right:20px;
+    background-color:#0C9;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+    margin-top:22px;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+    background: black; 
+}
