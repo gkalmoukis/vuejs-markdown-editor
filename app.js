@@ -13,11 +13,14 @@ new Vue({
             try {
                 var successful = document.execCommand('copy');
                 var msg = successful ? 'successful' : 'unsuccessful';
-                console.info('Markdown code was copied ' + msg);
-                alert('Markdown code was copied ' + msg);
-                
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Markdown code was copied',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
             } catch (err) {
-                console.error('Oops, unable to copy: ', err );
                 alert('Oops, unable to copy');
             }
 
